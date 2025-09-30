@@ -3,6 +3,8 @@ package projeto_final_bloco_01;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+import projeto_final_bloco_01.model.RoupaInfantil;
+import projeto_final_bloco_01.model.RoupaParaAdulto;
 import projeto_final_bloco_01.util.Cores;
 
 public class Menu {
@@ -11,6 +13,11 @@ public class Menu {
 	public static void main(String[] args) {
 	
 		int opcao;
+
+		RoupaParaAdulto r1 = new RoupaParaAdulto("adulto",2, 12, 12.0f,"verão");
+		r1.visualizar();
+		RoupaInfantil r2 = new RoupaInfantil("infantil",2, 12, 12.0f,"mickey");
+		r2.visualizar();
 		
 		while(true) {
 			System.out.println(Cores.TEXT_GREEN + Cores.ANSI_BLACK_BACKGROUND +"*****************************************");
@@ -46,7 +53,10 @@ public class Menu {
 			
 			switch(opcao) {
 				case 1:
-					System.out.println("Adicionar novos dados roupa\n\n");
+					System.out.println("Adicionar novos dados roupa\n\n");	
+					System.out.println("o tipo da roupa: 1-camiseta 2-calça");
+					int genero = leia.nextInt();
+					System.out.printf("qual tipo da roupa: ", genero);
 					keyPress();
 					break;
 				case 2:
@@ -86,6 +96,8 @@ public class Menu {
 		System.out.println(Cores.TEXT_GREEN + "\nPressione enter para continuar ...");
 		leia.nextLine();
 	}
+	
+
 
 	}
 
