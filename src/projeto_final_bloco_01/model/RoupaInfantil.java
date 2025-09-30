@@ -2,12 +2,11 @@ package projeto_final_bloco_01.model;
 
 public class RoupaInfantil extends Roupa{
 
-	String personagem;
+	private String personagem;
 	
-	public RoupaInfantil(String genero, int tipo, int etaria, float preco, String personagem) {
-		super(genero, tipo, etaria, preco);
+	public RoupaInfantil(int numero, String nome, int genero,  int etaria, float preco, String personagem) {
+		super(numero,nome, genero, etaria, preco);
 		this.personagem = personagem;
-		
 		
 	}
 
@@ -23,6 +22,6 @@ public class RoupaInfantil extends Roupa{
 	public void visualizar() {
 		super.visualizar();
 		//metodo super -> pega/puxa todo o metodo para a classe contacorrente
-		System.out.printf("O personagem  para as roupas é: %d", this.personagem);
+		System.out.printf("O personagem  para as roupas é: %s", this.personagem);
 	}
 }

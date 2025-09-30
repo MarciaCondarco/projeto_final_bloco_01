@@ -5,8 +5,8 @@ public class RoupaParaAdulto extends Roupa {
 	
 	private String estilo;
 	
-	public RoupaParaAdulto(String genero, int tipo, int etaria, float preco, String estilo) {
-		super(genero, tipo, etaria, preco);
+	public RoupaParaAdulto(int numero, String nome, int genero, int etaria, float preco, String estilo) {
+		super( numero,  nome,  genero,  etaria,  preco);
 		this.estilo = estilo;
 		
 	}
@@ -22,7 +22,7 @@ public class RoupaParaAdulto extends Roupa {
 	public void visualizar() {
 		super.visualizar();
 		//metodo super -> pega/puxa todo o metodo para a classe contacorrente
-		//System.out.printf("O estilo da roupas é: %d", this.estilo);
+		System.out.printf("O estilo da roupas é: %s", this.estilo);
 		// o limite só acrescenta
 	}
 

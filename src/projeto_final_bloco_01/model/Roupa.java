@@ -2,32 +2,50 @@ package projeto_final_bloco_01.model;
 
 public abstract class Roupa {
 	
-	private String genero;
-	private int tipo;
+	private int numero;
+	private String nome;
+	private int genero;
 	private int etaria;
 	private float preco;
 	
-	public Roupa(String genero, int tipo, int etaria, float preco) {
+	public Roupa(int numero, String nome, int genero, int etaria, float preco ) {
+		this.nome = nome;
 		this.genero = genero;
-		this.tipo = tipo;
 		this.etaria = etaria;
+		this.preco = preco;
+		this.numero = numero;
+	}
+
+	public float getPreco() {
+		return preco;
+	}
+
+	public void setPreco(float preco) {
 		this.preco = preco;
 	}
 
-	public String getGenero() {
+	public int getNumero() {
+		return numero;
+	}
+
+	public void setNumero(int numero) {
+		this.numero = numero;
+	}
+
+	public int getGenero() {
 		return genero;
 	}
 
-	public void setGenero(String genero) {
+	public void setGenero(int genero) {
 		this.genero = genero;
 	}
 
-	public int getTipo() {
-		return tipo;
+	public String getNome() {
+		return nome;
 	}
 
-	public void setTipo(int tipo) {
-		this.tipo = tipo;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
 	public int getEtaria() {
@@ -40,19 +58,20 @@ public abstract class Roupa {
 	
 	public void visualizar() {
 
-		String tipo = "1";
+		String genero = "";
 		
-		switch(this.tipo) {
-			case 1 -> tipo = "Adulto";
-			case 2 -> tipo = "Infantil";
-			default -> tipo = "Desconhecido";
+		switch(this.genero) {
+			case 1 -> genero = "Adulto";
+			case 2 -> genero = "Infantil";
+			default -> genero = "Desconhecido";
 		}
 		
 		System.out.println("\n***********************************************");
 		System.out.println("Dados da roupa");
 		System.out.println("*************************************************");
-		System.out.printf("Genero: %s%n", this.genero);
-		System.out.printf("categoria da roupa: %s%n", tipo);
+		System.out.printf("ID: %d%n", this.numero);
+		System.out.printf("nome da roupa: %s%n", this.nome);
+		System.out.printf("categoria da roupa: %s%n", genero);
 		System.out.printf("faixa etaria: %d%n", this.etaria);
 		System.out.printf("preço: %.2f%n", this.preco);	
 	}
