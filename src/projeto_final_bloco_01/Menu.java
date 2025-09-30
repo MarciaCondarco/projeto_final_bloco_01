@@ -163,7 +163,7 @@ public class Menu {
 				System.out.println("\nOperação cancelada!");
 			}
 		}else {
-			System.out.printf("\na roupa %d não foi encontrada", numero);
+			System.out.printf("\na roupa %d não foi encontrada ", numero);
 		}
 	}
 	private static void atualizarRoupa() {
@@ -198,7 +198,7 @@ public class Menu {
 			
 			switch(genero) {
 			case 1 -> {
-				//RoupaParaAdulto é uma herança de conta
+				//RoupaParaAdulto é uma herança deda classe roupa
 				String estilo = ((RoupaParaAdulto)roupa).getEstilo();//casting -> transforma o objeto
 				System.out.printf("qual novo estilo para a roupa?  ", estilo);
 				entrada = leia.nextLine();
